@@ -20,6 +20,10 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+//pass requests to the router middleware
+const router = require("./routes/post");
+app.use(router);
+
 //make the app listen on port
 const port = process.argv[2] || process.env.PORT || 3000;
 const server = app.listen(port, () => {
