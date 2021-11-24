@@ -20,6 +20,11 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+//rout for catalog
+app.get("/api/catalog", (req, res) => {
+  res.render("catalog");
+});
+
 //make the app listen on port
 const port = process.argv[2] || process.env.PORT || 3000;
 const server = app.listen(port, () => {
