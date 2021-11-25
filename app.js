@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
   res.render("index"); //no need for ejs extension });
 });
 
+//route for catalog
+app.get("/catalog", (req, res) => {
+  res.render("catalog");
+});
+
 //route for contacts
 app.get("/contacts", (req, res) => {
   res.render("contacts");
@@ -18,6 +23,11 @@ app.get("/contacts", (req, res) => {
 //route for register
 app.get("/register", (req, res) => {
   res.render("register");
+});
+
+//route for login
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
 //pass requests to the router middleware
