@@ -21,7 +21,7 @@ app.get("/register", (req, res) => {
 });
 
 //pass requests to the router middleware
-const router = require("./routes/post");
+const router = require("./routes/apis");
 app.use(router);
 
 //make the app listen on port

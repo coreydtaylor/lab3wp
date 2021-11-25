@@ -4,7 +4,7 @@ const searchService = function (callback) {
     if (err) {
       throw err;
     }
-    if (rows.length == 0) {
+    if (rows.length === 0) {
       console.log("No products!");
     } else {
       callback(null, rows);
@@ -16,10 +16,10 @@ const searchIDService = function (reference, callback) {
     if (err) {
       throw err;
     }
-    if (rows.length == 0) {
+    if (rows.length === 0) {
       console.log("Unkown product!");
       let product = null;
-      calback(null, product);
+      callback(null, product);
     } else {
       //rreturn the retrieved product
       callback(null, rows[0]);
@@ -31,10 +31,10 @@ const searchCategoryService = function (category, callback) {
     if (err) {
       throw err;
     }
-    if (rows.length == 0) {
+    if (rows.length === 0) {
       //no products
       console.log(`No product in category ${category}!`);
-      calback(null, rows);
+      callback(null, rows);
     } else {
       //return the rows
       callback(null, rows);
